@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transações</title>
+</head>
+<body>
+    <h1>Transações</h1>
+    <table>
+        <ul>
+            <li>Tipo</li>
+            <li>Descrição</li>
+            <li>Natureza</li>
+        </ul>
+        <ul>
+            <li>1</li>
+            <li>Débito</li>
+            <li>Entrada</li>
+        </ul>
+        <ul>
+            <li>2</li>
+            <li>Boleto</li>
+            <li>Saída</li>
+        </ul>
+        <ul>
+            <li>3</li>
+            <li>Financeamento</li>
+            <li>Saída</li>
+        </ul>
+        <ul>
+            <li>4</li>
+            <li>Crédito</li>
+            <li>Entrada</li>
+        </ul>
+        <ul>
+            <li>5</li>
+            <li>Recebimento empréstimo</li>
+            <li>Entrada</li>
+        </ul>
+        <ul>
+            <li>6</li>
+            <li>Vendas</li>
+            <li>Entradas</li>
+        </ul>
+        <ul>
+            <li>7</li>
+            <li>Recebimento TED</li>
+            <li>Entrada</li>
+        </ul>
+        <ul>
+            <li>8</li>
+            <li>Recebimento DOC</li>
+            <li>Entrada</li>
+        </ul>
+        <ul>
+            <li>9</li>
+            <li>Aluguel</li>
+            <li>Saída</li>
+        </ul>
+    </table>
+    <p>Transações registradas</p>
+    <ul>
+        {% for file in all_files%}
+        <li>
+            <h3>{{file.store_name}}</h3>
+            <p>Tipo de transação: {{file.type}}</p>
+            <span>Valor: {{file.value}}</span>
+        </li>
+          {% endfor %}
+    </ul>
+</body>
+</html>
